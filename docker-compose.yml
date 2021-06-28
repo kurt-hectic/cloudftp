@@ -1,0 +1,45 @@
+version: '3'
+services:
+    sftp:
+        image: atmoz/sftp
+        environment:
+            - ADMIN_NAME:$ADMIN_NAME
+            - ADMIN_PW:$ADMIN_PW
+        volumes:
+            - ./users.conf:/etc/sftp/users.conf:ro
+            - ./create-admin-user.sh:/etc/sftp.d/create-admin-user.sh
+            - ./data/ammc:/home/ammc
+            - ./data/babj:/home/babj
+            - ./data/damm:/home/damm
+            - ./data/dems:/home/dems
+            - ./data/drrn:/home/drrn
+            - ./data/edzw:/home/edzw
+            - ./data/egrr:/home/egrr
+            - ./data/eswi:/home/eswi
+            - ./data/fapr:/home/fapr
+            - ./data/fcbb:/home/fcbb
+            - ./data/flls:/home/flls
+            - ./data/gooy:/home/gooy
+            - ./data/heca:/home/heca
+            - ./data/hknc:/home/hknc
+            - ./data/kwbc:/home/kwbc
+            - ./data/lfpw:/home/lfpw
+            - ./data/liib:/home/liib
+            - ./data/lowm:/home/lowm
+            - ./data/lqsm:/home/lqsm
+            - ./data/lzso:/home/lzso
+            - ./data/nzkl:/home/nzkl
+            - ./data/oejd:/home/oejd
+            - ./data/oiii:/home/oiii
+            - ./data/okpr:/home/okpr
+            - ./data/rjtd:/home/rjtd
+            - ./data/ruhb:/home/ruhb
+            - ./data/rums:/home/rums
+            - ./data/runw:/home/runw
+            - ./data/sabm:/home/sabm
+            - ./data/sbbr:/home/sbbr
+            - ./data/svmr:/home/svmr
+            - ./data/uttw:/home/uttw
+            - ./data/vtbb:/home/vtbb
+        ports:
+            - "2222:22"
